@@ -5,7 +5,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] float moveSpeed = 20f;
+    
     private Rigidbody2D _rigidBody;
+    private Vector2 _movementInput;
 
     private void Awake()
     {
@@ -14,11 +17,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigidBody.velocity = new Vector2(1f, 0.5f);
+        _rigidBody.velocity = _movementInput * moveSpeed * Time.fixedDeltaTime;
     }
 
     private void OnMove(InputValue value)
     {
-        value.Get<Vector2>();
+        _movementInput = value.Get<Vector2>();
     }
 }
