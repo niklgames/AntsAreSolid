@@ -46,7 +46,14 @@ public class ScoreManager : MonoBehaviour
     {
         if (score == winScore)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (SceneManager.GetActiveScene().name == "Level_3")
+            {
+                SceneManager.LoadScene("YouWin");
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
     }
 }
