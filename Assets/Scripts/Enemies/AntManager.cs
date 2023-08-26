@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class AntManager : MonoBehaviour
 {
+    [SerializeField] GameObject playerPrefab;
     public GameObject antPrefab;
     public int numberOfAnts = 100;
 

@@ -11,7 +11,8 @@ public class BoidBehavior : MonoBehaviour
     public float rotationDamping = 0.3f;
     public float orientationAlteration = 5.0f;
 
-	private void Update()
+    
+    private void Update()
 	{
 		Vector3 separation = CalculateSeparation();
 		Vector3 alignment = CalculateAlignment();
@@ -34,9 +35,17 @@ public class BoidBehavior : MonoBehaviour
 		transform.rotation *= forceRotation;
 
 		transform.position += clampedForce * Time.deltaTime;
-	}
 
+        PreventPlayerGoingOffScreen();
 
+    }
+
+    private void LateUpdate()
+    {
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -17.5f, 17.5f),
+                                         Mathf.Clamp(transform.position.y, -9.5f, 9.5f),
+                                         transform.position.z);
+    }
 
     private Vector3 CalculateSeparation()
     {
@@ -106,5 +115,10 @@ public class BoidBehavior : MonoBehaviour
         }
 
         return cohesionForce.normalized;
+    }
+
+    private void PreventPlayerGoingOffScreen()
+    {
+        
     }
 }
