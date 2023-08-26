@@ -12,6 +12,7 @@ public class PlayerEat : MonoBehaviour
         {
             Debug.Log("Collision");
             Destroy(collision.gameObject);
+            ScoreManager.instance.AddPoints();
         }
     }
 }
