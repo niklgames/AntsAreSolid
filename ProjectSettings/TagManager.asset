@@ -8,6 +8,7 @@ TagManager:
   - Ant_1
   - FireAnt
   - Enemy
+  - PowerUp
   layers:
   - Default
   - TransparentFX

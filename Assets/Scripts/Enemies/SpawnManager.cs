@@ -14,11 +14,14 @@ public class SpawnManager : MonoBehaviour
     private List<GameObject> ants_1List = new List<GameObject>();
     private List<GameObject> fireAntsList = new List<GameObject>();
 
+    private void Awake()
+    {
+        InstantiatePlayer();
+    }
 
     private void Start()
     {
         InstantiateAnts_1();
-        InstantiatePlayer();
         InstantiateFireAnts();
     }
 
