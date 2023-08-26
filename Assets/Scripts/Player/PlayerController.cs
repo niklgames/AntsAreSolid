@@ -14,11 +14,13 @@ public class PlayerController : MonoBehaviour
     private Vector2 _smoothedMovementInput;
     private Vector2 _movementInputSmoothVelocity;
     private Camera _camera;
+    private Animator animator;
 
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
         _camera = Camera.main;
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void FixedUpdate()
@@ -35,6 +37,9 @@ public class PlayerController : MonoBehaviour
                                                          0.1f);
 
         _rigidBody.velocity = _smoothedMovementInput * _moveSpeed * Time.fixedDeltaTime;
+
+        
+        
     }
 
     private void RotateInDirectionOfInput()
