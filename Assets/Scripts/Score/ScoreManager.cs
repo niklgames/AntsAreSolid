@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class ScoreManager : MonoBehaviour
@@ -8,8 +9,10 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
     
     public TextMeshProUGUI scoreText;
+    public int winScore = 100;
 
     private int score = 0;
+    
 
     private void Awake()
     {
@@ -34,4 +37,16 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
+    private void Update()
+    {
+        CompleteLevel();
+    }
+
+    public void CompleteLevel()
+    {
+        if (score == winScore)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
 }
