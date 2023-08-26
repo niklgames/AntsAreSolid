@@ -9,11 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleMenu.unity
     guid: 5c5f198707e64bc4b8c8ff7371dd96ee
   - enabled: 1
+    path: Assets/Scenes/LoadingScreen_Level_1.unity
+    guid: 6ba0ce444c492b949b2eed92ff85a9c0
+  - enabled: 1
     path: Assets/Scenes/Level_1.unity
     guid: 69e70d6606722724eb6690ce3c5c0fbf
   - enabled: 1
+    path: Assets/Scenes/LoadingScreen_Level_2.unity
+    guid: 5dcb1c8ec741652498dcc62d5d69c046
+  - enabled: 1
     path: Assets/Scenes/Level_2.unity
     guid: ad14d1e70a185854793456af0b9bf89f
+  - enabled: 1
+    path: Assets/Scenes/LoadingScreen_Level_3.unity
+    guid: 7533dc619b5efd841ae9ec503948e1ae
   - enabled: 1
     path: Assets/Scenes/Level_3.unity
     guid: e5b34535c50644d4b920f84f00a8e608

@@ -44,7 +44,7 @@ public class ScoreManager : MonoBehaviour
 
     public void CompleteLevel()
     {
-        if (score == winScore)
+        if (score >= winScore)
         {
             if (SceneManager.GetActiveScene().name == "Level_3")
             {
