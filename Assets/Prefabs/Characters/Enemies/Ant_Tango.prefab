@@ -115,13 +115,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8653598978222033854}
-  - component: {fileID: 4807032484626265457}
+  - component: {fileID: 6145757252368902930}
   - component: {fileID: 1269356056846450997}
   - component: {fileID: 6611092789648562661}
   - component: {fileID: 3291512501733189412}
   - component: {fileID: 1635955921078392381}
   m_Layer: 0
-  m_Name: Ant_1
+  m_Name: Ant_Tango
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,7 +143,7 @@ Transform:
   - {fileID: 2563984137776636419}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4807032484626265457
+--- !u!114 &6145757252368902930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,16 +152,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6586598709451303721}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6e100aabc6228845852ae58bbb40f6a, type: 3}
+  m_Script: {fileID: 11500000, guid: dbfea8a66c8ee2f439b0f5eaf1a733a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  separationRadius: 5
-  alignmentRadius: 2
-  cohesionRadius: 2
-  maxSpeed: 5
-  randomForceMagnitude: 0.1
-  rotationDamping: 0.3
-  orientationAlteration: 5
+  avoidDistance: 100
+  maxSpeed: 2
 --- !u!61 &1269356056846450997
 BoxCollider2D:
   m_ObjectHideFlags: 0
