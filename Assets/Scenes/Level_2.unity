@@ -586,7 +586,9 @@ MonoBehaviour:
   playerPrefab: {fileID: 2468166357170668556, guid: ee93e313902945c45beb099536a86089, type: 3}
   playerSpawnPosition: {fileID: 2015186919}
   ant_1Prefab: {fileID: 6586598709451303721, guid: ac634a318a5ff4443944dd188e50bb1b, type: 3}
+  fireAntPrefab: {fileID: 1530638513239805499, guid: 554b71bff58fb1f4ab32925960e99aa3, type: 3}
   numberOfAnts_1: 100
+  numberOfFireAnts: 5
 --- !u!4 &1287318586
 Transform:
   m_ObjectHideFlags: 0

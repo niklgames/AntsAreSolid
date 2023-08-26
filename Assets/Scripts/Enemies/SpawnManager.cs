@@ -1,10 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SpawnManager : MonoBehaviour
 {
-    [SerializeField] public Slider satietySliderUI;
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private Transform playerSpawnPosition;
 
@@ -27,7 +25,6 @@ public class SpawnManager : MonoBehaviour
     private void InstantiatePlayer()
     {
         GameObject player = Instantiate(playerPrefab, playerSpawnPosition.position, Quaternion.identity);
-        player.GetComponent<PlayerEat>().satietySlider = satietySliderUI;
     }
 
     private void InstantiateAnts_1()
@@ -42,11 +39,15 @@ public class SpawnManager : MonoBehaviour
 
     private void InstantiateFireAnts()
     {
-        for (int i = 0; i < numberOfFireAnts; i++)
+        if(fireAntPrefab != null)
         {
-            Quaternion randomRotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
-            GameObject ant = Instantiate(fireAntPrefab, Random.insideUnitCircle * 10, randomRotation);
-            fireAntsList.Add(ant);
+            for (int i = 0; i < numberOfFireAnts; i++)
+            {
+                Quaternion randomRotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
+                GameObject ant = Instantiate(fireAntPrefab, Random.insideUnitCircle * 10, randomRotation);
+                fireAntsList.Add(ant);
+            }
         }
+        
     }
 }
