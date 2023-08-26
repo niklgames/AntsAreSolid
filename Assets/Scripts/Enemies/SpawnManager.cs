@@ -28,7 +28,6 @@ public class SpawnManager : MonoBehaviour
     {
         InstantiateAnts_1();
         InstantiateAvoidantAnts();
-        InstantiatePlayer();
         InstantiateFireAnts();
     }
 

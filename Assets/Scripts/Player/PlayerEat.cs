@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerEat : MonoBehaviour
 {
@@ -29,6 +30,11 @@ public class PlayerEat : MonoBehaviour
         currentSatiety = Mathf.Clamp01(currentSatiety);
         
         satietySlider.value = currentSatiety;
+
+        if (satietySlider.value <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     public void EatAnt()
