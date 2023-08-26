@@ -10,7 +10,6 @@ public class PlayerEat : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Collision");
             Destroy(collision.gameObject);
             ScoreManager.instance.AddPoints();
         }
