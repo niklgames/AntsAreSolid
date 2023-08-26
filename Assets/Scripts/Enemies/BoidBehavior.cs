@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class BoidBehavior : MonoBehaviour
 {
+    private GameObject ground;
+
     public float separationRadius = 1.0f;
     public float alignmentRadius = 2.0f;
     public float cohesionRadius = 2.0f;
@@ -11,7 +13,11 @@ public class BoidBehavior : MonoBehaviour
     public float rotationDamping = 0.3f;
     public float orientationAlteration = 5.0f;
 
-    
+    private void Awake()
+    {
+        ground = GameObject.FindWithTag("Ground");
+    }
+
     private void Update()
 	{
 		Vector3 separation = CalculateSeparation();
@@ -42,9 +48,7 @@ public class BoidBehavior : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -17.5f, 17.5f),
-                                         Mathf.Clamp(transform.position.y, -9.5f, 9.5f),
-                                         transform.position.z);
+        PreventPlayerGoingOffScreen();
     }
 
     private Vector3 CalculateSeparation()
@@ -119,6 +123,8 @@ public class BoidBehavior : MonoBehaviour
 
     private void PreventPlayerGoingOffScreen()
     {
-        
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -25, 25),
+                                         Mathf.Clamp(transform.position.y, -15, 15),
+                                         transform.position.z);
     }
 }
