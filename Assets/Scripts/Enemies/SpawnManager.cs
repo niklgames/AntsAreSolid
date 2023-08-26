@@ -1,15 +1,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AntManager : MonoBehaviour
+public class SpawnManager : MonoBehaviour
 {
-    [SerializeField] GameObject playerPrefab;
+    [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private Transform playerSpawnPosition;
+
     public GameObject antPrefab;
     public int numberOfAnts = 100;
 
     private List<GameObject> ants = new List<GameObject>();
 
     private void Start()
+    {
+        InstantiateAnts();
+        InstantiatePlayer();
+    }
+
+    private void InstantiatePlayer()
+    {
+        GameObject player = Instantiate(playerPrefab, playerSpawnPosition.position, Quaternion.identity);
+    }
+
+    private void InstantiateAnts()
     {
         for (int i = 0; i < numberOfAnts; i++)
         {
