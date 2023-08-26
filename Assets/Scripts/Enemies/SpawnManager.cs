@@ -19,6 +19,10 @@ public class SpawnManager : MonoBehaviour
     private List<GameObject> AvoidantAntList = new List<GameObject>();
     private List<GameObject> fireAntsList = new List<GameObject>();
 
+    private void Awake()
+    {
+        InstantiatePlayer();
+    }
 
     private void Start()
     {
