@@ -39,11 +39,15 @@ public class SpawnManager : MonoBehaviour
 
     private void InstantiateFireAnts()
     {
-        for (int i = 0; i < numberOfFireAnts; i++)
+        if(fireAntPrefab != null)
         {
-            Quaternion randomRotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
-            GameObject ant = Instantiate(fireAntPrefab, Random.insideUnitCircle * 10, randomRotation);
-            fireAntsList.Add(ant);
+            for (int i = 0; i < numberOfFireAnts; i++)
+            {
+                Quaternion randomRotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
+                GameObject ant = Instantiate(fireAntPrefab, Random.insideUnitCircle * 10, randomRotation);
+                fireAntsList.Add(ant);
+            }
         }
+        
     }
 }

@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - Ground
+  - Ant_1
+  - FireAnt
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -22,9 +22,16 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
-    public void AddPoints()
+    public void AddPoints_Ant_1()
     {
         score += 1;
         scoreText.text = score.ToString();
     }
+
+    public void AddPoints_FireAnt()
+    {
+        score += 2;
+        scoreText.text = score.ToString();
+    }
+
 }

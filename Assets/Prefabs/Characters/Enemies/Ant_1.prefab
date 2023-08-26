@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 1635955921078392381}
   m_Layer: 0
   m_Name: Ant_1
-  m_TagString: Enemy
+  m_TagString: Ant_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
