@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnManager : MonoBehaviour
 {
+    [SerializeField] public Slider satietySliderUI;
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private Transform playerSpawnPosition;
 
@@ -25,6 +27,7 @@ public class SpawnManager : MonoBehaviour
     private void InstantiatePlayer()
     {
         GameObject player = Instantiate(playerPrefab, playerSpawnPosition.position, Quaternion.identity);
+        player.GetComponent<PlayerEat>().satietySlider = satietySliderUI;
     }
 
     private void InstantiateAnts_1()
