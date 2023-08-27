@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerEat : MonoBehaviour
 {
-    [SerializeField] 
+    
 
     public float startingSatiety = 1.0f; // 100%
     public float satietyDecreaseRate = 0.1f; // Rate of decrease per second
@@ -47,6 +47,7 @@ public class PlayerEat : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ant_1"))
         {
+            GameObject.FindWithTag("Crunch").GetComponent<AudioSource>().Play();
             Destroy(collision.gameObject);
             ScoreManager.instance.AddPoints_Ant_1();
             EatAnt();
@@ -54,6 +55,7 @@ public class PlayerEat : MonoBehaviour
 
         if (collision.gameObject.CompareTag("FireAnt"))
         {
+            GameObject.FindWithTag("Crunch").GetComponent<AudioSource>().Play();
             Destroy(collision.gameObject);
             ScoreManager.instance.AddPoints_FireAnt();
         }

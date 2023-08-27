@@ -9,6 +9,10 @@ TagManager:
   - FireAnt
   - Enemy
   - PowerUp
+  - SoundManager
+  - Crunch
+  - Crush
+  - FireBall
   layers:
   - Default
   - TransparentFX

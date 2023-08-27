@@ -22,6 +22,7 @@ public class FireAntBehaviour : MonoBehaviour
     private void InstantiateProjectile()
     {
         Instantiate(projectilePrefab, launchOffset.position, transform.rotation);
+        GameObject.FindWithTag("FireBall").GetComponent<AudioSource>().Play();
     }
 
 }

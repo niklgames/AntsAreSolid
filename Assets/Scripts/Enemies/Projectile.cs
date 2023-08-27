@@ -12,7 +12,6 @@ public class Projectile : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
-        
         Destroy(this.gameObject, 5.0f);
 
     }
@@ -47,7 +46,11 @@ public class Projectile : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
+            
+            Destroy(player);
+
             SceneManager.LoadScene("GameOver");
+            
         }
     }
 

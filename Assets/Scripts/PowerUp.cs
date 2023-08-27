@@ -23,6 +23,7 @@ public class PowerUp : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            GameObject.FindWithTag("PowerUpSound").GetComponent<AudioSource>().Play();
             player.GetComponent<PlayerController>()._moveSpeed = speedUpPowerUpValue;
             Destroy(gameObject);
         }
