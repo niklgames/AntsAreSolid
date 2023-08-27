@@ -47,7 +47,7 @@ public class Projectile : MonoBehaviour
         {
             Destroy(gameObject);
             
-            Destroy(player);
+            //Destroy(player);
 
             SceneManager.LoadScene("GameOver");
             

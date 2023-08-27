@@ -13,6 +13,7 @@ TagManager:
   - Crunch
   - Crush
   - FireBall
+  - PowerUpSound
   layers:
   - Default
   - TransparentFX
